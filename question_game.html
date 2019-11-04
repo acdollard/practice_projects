@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var questions = {
+            "q1" : "Atlanta is the capital of Georgia",
+            "a1" : true,
+            "q2" : "Alex likes dogs",
+            "a2" : true,
+            "q3" : "Hyrdogen is a rare element",
+            "a3" : false, 
+        }
+
+        var correctAnswers = 0
+        var incorrectAnswers = 0 
+
+console.log(questions.q1)
+
+        for(i = 0; i < 1; i++){
+           var firstQuestion = confirm(questions.q1); 
+           if(firstQuestion){
+               alert("Correct!");
+               correctAnswers++; 
+        } else {alert("Incorrect!");
+                incorrectAnswers++;};
+
+            var secondQuestion = confirm(questions.q2);
+            if(secondQuestion){
+                alert("Correct!");
+                correctAnswers++;
+            } else {alert("Incorrect!");
+                    incorrectAnswers++;};
+            
+            var thirdQuestion = confirm(questions.q3);
+            if(thirdQuestion){
+                alert("Correct!");
+                correctAnswers++;
+            } else {alert("Incorrect!");
+                    incorrectAnswers++;};
+
+        }
+
+        alert("Correct: " + correctAnswers + ", Incorrect: " + incorrectAnswers)
+
+        
+
+
+
+        
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </script>
+    
+</body>
+</html>
