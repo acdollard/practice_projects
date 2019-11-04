@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    var salutation = alert("Hello!")
+    
+    var computerChoices = ["rock", "paper", "scissors"];
+    var wins = 0;
+    var losses = 0; 
+    var ties = 0;
+ 
+    for (var i = 0; i < 10; i++) {
+        var userGuess = prompt("Enter r, p, or s to play!");
+        userGuess = userGuess.toLowerCase();
+        if(userGuess === "r" || userGuess ==="p" || userGuess === "s"){
+        alert("You chose " + userGuess + "!");}
+
+        var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+        alert("the computer chose " + computerGuess +"!");
+
+        if((userGuess === "r" && computerGuess === "scissors") || (userGuess === "p" && computerGuess === "rock") || (userGuess === "s" && computerGuess === "paper")){
+            wins++;
+            alert("You won!");
+        } else if ((userGuess === "r" && computerGuess === "rock") || (userGuess === "p" && computerGuess === "paper") || (userGuess === "s" && computerGuess === "scissors"))
+        {
+            alert("It's a draw!");
+            ties ++;
+        } else {
+            alert("You lost!");
+            losses ++; 
+        }
+        }
+
+        alert("You won " + wins + " times, you lost " + losses + " times, and you had " + ties + " draws! Good game."); 
+    </script>
+</body>
+</html>
